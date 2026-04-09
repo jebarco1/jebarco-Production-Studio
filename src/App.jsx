@@ -88,7 +88,7 @@ function Navbar() {
           {/* Logo */}
           <div >
             <img
-              src="/images/logo.png"
+              src="/public/images/logo.png"
               alt="Jebarco Logo"
               className="h-10 w-10 object-contain drop-shadow-[0_0_10px_rgba(216,177,90,0.6)]"
             />
@@ -150,15 +150,20 @@ function Hero() {
       className="relative overflow-hidden px-6 pb-20 pt-20 lg:px-8 lg:pb-28 lg:pt-24"
     >
       {/* Background Image Layer */}
-      <div className="absolute inset-0 -z-10">
-        <img
-          src="/god-bg.png"
-          alt=""
-          className="h-full w-full object-cover object-center"
-        />
-        {/* dark + color overlay for readability and brand */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#06111a]" />
-      </div>
+<div
+  className="absolute inset-0 z-0 bg-no-repeat bg-center"
+  style={{
+    backgroundImage: "url('/images/god-bg.png')",
+    backgroundSize: "80%",
+    opacity: 0.25,
+    WebkitMaskImage:
+      "radial-gradient(circle at center, rgba(0,0,0,1) 35%, rgba(0,0,0,0.7) 55%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 90%)",
+    maskImage:
+      "radial-gradient(circle at center, rgba(0,0,0,1) 35%, rgba(0,0,0,0.7) 55%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 90%)",
+  }}
+>
+  <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-[#06111a]" />
+</div>
 
       {/* Ambient glow */}
       <div className="pointer-events-none absolute inset-0">
