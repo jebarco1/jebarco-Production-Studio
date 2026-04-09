@@ -497,7 +497,7 @@ function ContactSection() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="mailto:hello@jebarco.com"
+              href="mailto:jebarco@gmail.com"
               className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-7 py-4 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
             >
               Email Jebarco
