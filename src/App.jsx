@@ -5,15 +5,15 @@ import {
   Code2,
   Layers3,
   Wallet,
-  ChartNoAxesCombined,
-  Dumbbell,
+  BarChart3,
+  Cpu,
   Building2,
   Sparkles,
   Mail,
   Globe,
   Menu,
   X,
-  Cpu
+  Dice5,
 } from "lucide-react";
 
 const projects = [
@@ -22,7 +22,7 @@ const projects = [
     domain: "focuslottery.com",
     url: "https://focuslottery.com",
     category: "Lottery Analytics",
-    icon: ChartNoAxesCombined,
+    icon: BarChart3,
     accent: "from-cyan-400/20 to-blue-500/20",
     badge: "Data-Driven Insights",
     tagline: "AI-powered lottery intelligence using statistics, patterns, and predictive analysis.",
@@ -35,7 +35,7 @@ const projects = [
     domain: "ikalisk.com",
     url: "https://ikalisk.com",
     category: "Crypto Payments",
-    icon: Wallet,
+    icon: Dice5,
     accent: "from-emerald-400/20 to-teal-500/20",
     badge: "Kaspa Powered",
     tagline: "An AI-enhanced betting and payment experience built on Kaspa for fast digital transactions.",
@@ -317,7 +317,7 @@ function ProjectCard({ project, index }) {
           <a
             href={project.url}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
           >
             Visit Site
@@ -521,10 +521,10 @@ function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:flex-row">
         <p className="text-sm text-white/45">© {new Date().getFullYear()} Jebarco. All rights reserved.</p>
         <div className="flex items-center gap-5 text-sm text-white/45">
-          <a href="https://focuslottery.com" target="_blank" rel="noreferrer" className="transition hover:text-white">FocusLottery</a>
-          <a href="https://ikalisk.com" target="_blank" rel="noreferrer" className="transition hover:text-white">iKalisk</a>
-          <a href="https://poundmod.com" target="_blank" rel="noreferrer" className="transition hover:text-white">PoundMod</a>
-          <a href="https://orcazoo.com" target="_blank" rel="noreferrer" className="transition hover:text-white">Orcazoo</a>
+          <a href="https://focuslottery.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">FocusLottery</a>
+          <a href="https://ikalisk.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">iKalisk</a>
+          <a href="https://poundmod.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">PoundMod</a>
+          <a href="https://orcazoo.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Orcazoo</a>
         </div>
       </div>
     </footer>
