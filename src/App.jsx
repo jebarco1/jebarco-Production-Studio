@@ -31,31 +31,43 @@ const projects = [
     highlights: ["Pattern tracking", "Number analysis", "Insight dashboards"],
   },
   {
-    name: "iKalisk",
-    domain: "ikalisk.com",
-    url: "https://ikalisk.com",
-    category: "Crypto Payments",
-    icon: Wallet,
-    accent: "from-emerald-400/20 to-teal-500/20",
-    badge: "Kaspa Powered",
-    tagline: "A sleek payment experience built around Kaspa for fast digital transactions.",
-    description:
-      "Designed for speed and simplicity, iKalisk explores a modern crypto-first payment flow with a strong product feel and practical transaction UX.",
-    highlights: ["Kaspa payments", "Wallet flows", "Modern UI"],
-  },
+  name: "iKalisk",
+  domain: "ikalisk.com",
+  url: "https://ikalisk.com",
+  category: "Crypto Betting Platform",
+  icon: Wallet,
+  accent: "from-emerald-400/20 to-teal-500/20",
+  badge: "Kaspa Powered Betting",
+  tagline: "A decentralized betting platform powered by the speed and scalability of the Kaspa blockchain.",
+  description:
+    "iKalisk is a crypto-native betting platform built on the Kaspa blockchain, enabling fast, secure, and transparent wagering on a wide range of events with near-instant transaction finality.",
+  highlights: [
+    "Kaspa blockchain integration",
+    "Fast transaction settlement",
+    "Decentralized betting",
+    "Secure wallet interactions",
+    "Real-time wagering"
+  ],
+},
   {
-    name: "PoundMod",
-    domain: "poundmod.com",
-    url: "https://poundmod.com",
-    category: "Fitness Brand",
-    icon: Dumbbell,
-    accent: "from-orange-400/20 to-red-500/20",
-    badge: "Transformation Focused",
-    tagline: "A bold digital brand centered on discipline, performance, and transformation.",
-    description:
-      "PoundMod is a fitness-driven product brand concept built to motivate users through identity, consistency, and sharp visual energy.",
-    highlights: ["Fitness branding", "Motivation", "Performance identity"],
-  },
+  name: "PoundMod",
+  domain: "poundmod.com",
+  url: "https://poundmod.com",
+  category: "Crypto Mining & Investment",
+  icon: Dumbbell, // you can swap to Cpu or Server for better fit
+  accent: "from-orange-400/20 to-red-500/20",
+  badge: "Mining + Capital",
+  tagline: "A crypto mining farm and investment firm focused on performance, efficiency, and scalable returns.",
+  description:
+    "PoundMod operates as a crypto mining farm and investment firm, combining optimized mining infrastructure with strategic capital deployment to generate consistent blockchain-based returns.",
+  highlights: [
+    "Mining operations",
+    "Investment strategies",
+    "Hardware optimization",
+    "Energy efficiency",
+    "Scalable infrastructure"
+  ],
+},
   {
     name: "Orcazoo",
     domain: "orcazoo.com",
