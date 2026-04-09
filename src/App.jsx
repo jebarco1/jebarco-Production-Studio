@@ -136,11 +136,26 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden px-6 pb-20 pt-20 lg:px-8 lg:pb-28 lg:pt-24">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-1/2 top-10 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl" />
-        <div className="absolute right-10 top-40 h-80 w-80 rounded-full bg-violet-500/10 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-emerald-400/10 blur-3xl" />
+    <section
+      id="top"
+      className="relative overflow-hidden px-6 pb-20 pt-20 lg:px-8 lg:pb-28 lg:pt-24"
+    >
+      {/* Background Image Layer */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src="/god-bg.png"
+          alt=""
+          className="h-full w-full object-cover object-center"
+        />
+        {/* dark + color overlay for readability and brand */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#06111a]" />
+      </div>
+
+      {/* Ambient glow */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-1/2 top-10 h-72 w-72 -translate-x-1/2 rounded-full bg-[#d8b15a]/10 blur-3xl" />
+        <div className="absolute right-10 top-40 h-80 w-80 rounded-full bg-[#4ea2ff]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-[#4ea2ff]/10 blur-3xl" />
       </div>
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
@@ -149,9 +164,9 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1.5 text-sm font-medium text-cyan-300"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d8b15a]/25 bg-[#d8b15a]/10 px-4 py-1.5 text-sm font-medium text-[#d8b15a]"
           >
-            <span className="h-2 w-2 rounded-full bg-cyan-300" />
+            <span className="h-2 w-2 rounded-full bg-[#d8b15a]" />
             Founder Portfolio + Product Studio
           </motion.div>
 
@@ -162,7 +177,7 @@ function Hero() {
             className="max-w-4xl font-sans text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl"
           >
             One builder.
-            <span className="block text-cyan-300">Multiple products.</span>
+            <span className="block text-[#d8b15a]">Multiple products.</span>
             <span className="block text-white/90">Real digital solutions.</span>
           </motion.h1>
 
@@ -170,11 +185,9 @@ function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-6 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl"
+            className="mt-6 max-w-2xl text-lg leading-8 text-white/80 sm:text-xl"
           >
-            I build AI-powered software experiences across lottery analytics, crypto payments,
-            crypto mining, and business SaaS. Jebarco.com is the home for intelligent platforms I design,
-            launch, and continuously evolve.
+            I build AI-powered software experiences across crypto payments, crypto mining, marketing, digital signage, automation, and business SaaS. Jebarco.com is the home for intelligent platforms I design, launch, and continuously evolve.
           </motion.p>
 
           <motion.div
@@ -185,7 +198,7 @@ function Hero() {
           >
             <a
               href="#projects"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-7 py-4 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#e86f2a] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#d46022]"
             >
               Explore Ventures
               <ArrowRight className="h-4 w-4" />
@@ -220,13 +233,13 @@ function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
         >
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl shadow-cyan-900/20 backdrop-blur-xl">
-            <div className="mb-4 flex items-center justify-between rounded-2xl border border-white/10 bg-[#0b1823] px-4 py-3">
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl shadow-[#d8b15a]/10 backdrop-blur-xl">
+            <div className="mb-4 flex items-center justify-between rounded-2xl border border-white/10 bg-[#10182d] px-4 py-3">
               <div>
                 <p className="text-xs uppercase tracking-[0.18em] text-white/40">Studio Overview</p>
                 <p className="mt-1 text-sm font-semibold text-white">Product Ecosystem</p>
               </div>
-              <div className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-300">
+              <div className="rounded-full border border-[#d8b15a]/25 bg-[#d8b15a]/10 px-3 py-1 text-xs font-medium text-[#d8b15a]">
                 Live Portfolio
               </div>
             </div>
@@ -497,7 +510,7 @@ function ContactSection() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="mailto:jebarco@gmail.com"
+              href="mailto:hello@jebarco.com"
               className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-7 py-4 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
             >
               Email Jebarco
