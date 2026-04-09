@@ -171,9 +171,7 @@ function Hero() {
 
           <motion.p initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
-            I build product-focused software experiences across lottery analytics, crypto payments,
-            fitness branding, and business SaaS. Jebarco.com is the home for the ventures I design,
-            launch, and evolve.
+            From betting platforms and mining infrastructure to business tools and analytics systems — I design and launch software built for performance and real-world impact.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
