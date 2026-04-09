@@ -84,12 +84,21 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#06111a]/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#top" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-300 shadow-lg shadow-cyan-500/10">
-            <Sparkles className="h-5 w-5" />
+       <a href="#top" className="flex items-center gap-3">
+          {/* Logo */}
+          <div >
+            <img
+              src="/images/logo.png"
+              alt="Jebarco Logo"
+              className="h-10 w-10 object-contain drop-shadow-[0_0_10px_rgba(216,177,90,0.6)]"
+            />
           </div>
+
+          {/* Text */}
           <div>
-            <p className="text-sm font-semibold tracking-[0.22em] text-cyan-300 uppercase">Jebarco</p>
+            <p className="text-sm font-semibold tracking-[0.22em] text-[#d8b15a] uppercase">
+              Jebarco
+            </p>
             <p className="text-xs text-white/50">Product Studio</p>
           </div>
         </a>
