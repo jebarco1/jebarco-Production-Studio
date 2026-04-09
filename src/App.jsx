@@ -86,18 +86,19 @@ function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
        <a href="#top" className="flex items-center gap-3">
           {/* Logo */}
-          <div>
-            <img
-              src="/images/logo.png"
-              alt="Jebarco Logo"
-              style={{
-                height: "40px",
-                width: "40px",
-                objectFit: "contain",
-                filter: "drop-shadow(0 0 10px rgba(216,177,90,0.6))",
-              }}
-            />
-          </div>
+        <div>
+          <img
+            src="http://jebarco.com/images/logo.png"
+            alt="Jebarco Logo"
+            style={{
+              height: "40px",
+              width: "40px",
+              objectFit: "contain",
+              display: "block",
+              filter: "drop-shadow(0 0 10px rgba(216,177,90,0.6))",
+            }}
+          />
+        </div>
 
           {/* Text */}
           <div>
