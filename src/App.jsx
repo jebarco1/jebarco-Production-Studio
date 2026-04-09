@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import {
   ArrowRight,
   ExternalLink,
@@ -14,6 +13,7 @@ import {
   Globe,
   Menu,
   X,
+  Cpu
 } from "lucide-react";
 
 const projects = [
@@ -25,49 +25,37 @@ const projects = [
     icon: ChartNoAxesCombined,
     accent: "from-cyan-400/20 to-blue-500/20",
     badge: "Data-Driven Insights",
-    tagline: "Lottery intelligence powered by statistics, patterns, and prediction-focused analysis.",
+    tagline: "AI-powered lottery intelligence using statistics, patterns, and predictive analysis.",
     description:
       "A modern analytics platform for tracking number frequency, spotting patterns, and visualizing lottery insights through a clean interactive interface.",
     highlights: ["Pattern tracking", "Number analysis", "Insight dashboards"],
   },
   {
-  name: "iKalisk",
-  domain: "ikalisk.com",
-  url: "https://ikalisk.com",
-  category: "Crypto Betting Platform",
-  icon: Wallet,
-  accent: "from-emerald-400/20 to-teal-500/20",
-  badge: "Kaspa Powered Betting",
-  tagline: "A decentralized betting platform powered by the speed and scalability of the Kaspa blockchain.",
-  description:
-    "iKalisk is a crypto-native betting platform built on the Kaspa blockchain, enabling fast, secure, and transparent wagering on a wide range of events with near-instant transaction finality.",
-  highlights: [
-    "Kaspa blockchain integration",
-    "Fast transaction settlement",
-    "Decentralized betting",
-    "Secure wallet interactions",
-    "Real-time wagering"
-  ],
-},
+    name: "iKalisk",
+    domain: "ikalisk.com",
+    url: "https://ikalisk.com",
+    category: "Crypto Payments",
+    icon: Wallet,
+    accent: "from-emerald-400/20 to-teal-500/20",
+    badge: "Kaspa Powered",
+    tagline: "An AI-enhanced betting and payment experience built on Kaspa for fast digital transactions.",
+    description:
+      "Designed for speed and simplicity, iKalisk explores a modern crypto-first payment flow with a strong product feel and practical transaction UX.",
+    highlights: ["Kaspa payments", "Wallet flows", "Modern UI"],
+  },
   {
-  name: "PoundMod",
-  domain: "poundmod.com",
-  url: "https://poundmod.com",
-  category: "Crypto Mining & Investment",
-  icon: Dumbbell, // you can swap to Cpu or Server for better fit
-  accent: "from-orange-400/20 to-red-500/20",
-  badge: "Mining + Capital",
-  tagline: "A crypto mining farm and investment firm focused on performance, efficiency, and scalable returns.",
-  description:
-    "PoundMod operates as a crypto mining farm and investment firm, combining optimized mining infrastructure with strategic capital deployment to generate consistent blockchain-based returns.",
-  highlights: [
-    "Mining operations",
-    "Investment strategies",
-    "Hardware optimization",
-    "Energy efficiency",
-    "Scalable infrastructure"
-  ],
-},
+    name: "PoundMod",
+    domain: "poundmod.com",
+    url: "https://poundmod.com",
+    category: "Crypto Mining & Investment",
+    icon: Cpu,
+    accent: "from-orange-400/20 to-red-500/20",
+    badge: "Mining + Capital",
+    tagline: "An AI-optimized crypto mining and investment platform focused on performance, efficiency, and scalable returns.",
+    description:
+      "PoundMod operates as both a crypto mining farm and an investment firm, optimizing hardware, energy usage, and capital deployment to generate consistent blockchain-based returns.",
+    highlights: ["Mining operations", "Investment strategies", "Hardware optimization", "Energy efficiency"],
+  },
   {
     name: "Orcazoo",
     domain: "orcazoo.com",
@@ -76,7 +64,7 @@ const projects = [
     icon: Building2,
     accent: "from-violet-400/20 to-fuchsia-500/20",
     badge: "Growth Platform",
-    tagline: "A unified platform for marketing, affiliate systems, and automation.",
+    tagline: "An AI-powered platform for marketing, affiliate systems, and automation.",
     description:
       "Orcazoo brings multiple business-growth functions into one connected system for teams that want better visibility, stronger workflows, and smarter scale.",
     highlights: ["Marketing tools", "Affiliate workflows", "Automation"],
@@ -156,40 +144,68 @@ function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1.5 text-sm font-medium text-cyan-300">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1.5 text-sm font-medium text-cyan-300"
+          >
             <span className="h-2 w-2 rounded-full bg-cyan-300" />
             Founder Portfolio + Product Studio
           </motion.div>
 
-          <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="max-w-4xl font-sans text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="max-w-4xl font-sans text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl"
+          >
             One builder.
             <span className="block text-cyan-300">Multiple products.</span>
             <span className="block text-white/90">Real digital solutions.</span>
           </motion.h1>
 
-          <motion.p initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-6 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
-            From betting platforms and mining infrastructure to business tools and analytics systems — I design and launch software built for performance and real-world impact.
+          <motion.p
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="mt-6 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl"
+          >
+            I build AI-powered software experiences across lottery analytics, crypto payments,
+            crypto mining, and business SaaS. Jebarco.com is the home for intelligent platforms I design,
+            launch, and continuously evolve.
           </motion.p>
 
-          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="#projects" className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-7 py-4 text-sm font-bold text-slate-950 transition hover:bg-cyan-300">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="mt-10 flex flex-col gap-4 sm:flex-row"
+          >
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-7 py-4 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
+            >
               Explore Ventures
               <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-semibold text-white transition hover:bg-white/10">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
               Work With Me
             </a>
           </motion.div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {stats.map((stat, index) => (
-              <motion.div key={stat.label} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.08 }}
-                className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
+                className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
+              >
                 <p className="text-xs uppercase tracking-[0.18em] text-white/45">{stat.label}</p>
                 <p className="mt-2 text-sm font-semibold text-white/90">{stat.value}</p>
               </motion.div>
@@ -197,8 +213,12 @@ function Hero() {
           </div>
         </div>
 
-        <motion.div initial={{ opacity: 0, scale: 0.96, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }} className="relative">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative"
+        >
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl shadow-cyan-900/20 backdrop-blur-xl">
             <div className="mb-4 flex items-center justify-between rounded-2xl border border-white/10 bg-[#0b1823] px-4 py-3">
               <div>
@@ -214,7 +234,10 @@ function Hero() {
               {projects.map((project) => {
                 const Icon = project.icon;
                 return (
-                  <div key={project.name} className={`rounded-3xl border border-white/10 bg-gradient-to-br ${project.accent} p-5`}>
+                  <div
+                    key={project.name}
+                    className={`rounded-3xl border border-white/10 bg-gradient-to-br ${project.accent} p-5`}
+                  >
                     <div className="flex items-center justify-between">
                       <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-black/20 text-white">
                         <Icon className="h-5 w-5" />
@@ -253,10 +276,15 @@ function SectionHeader({ eyebrow, title, description }) {
 function ProjectCard({ project, index }) {
   const Icon = project.icon;
   return (
-    <motion.article initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, delay: index * 0.08 }}
-      className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-7 backdrop-blur-sm transition hover:-translate-y-1 hover:border-cyan-400/25 hover:bg-white/[0.07]">
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, delay: index * 0.08 }}
+      className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-7 backdrop-blur-sm transition hover:-translate-y-1 hover:border-cyan-400/25 hover:bg-white/[0.07]"
+    >
       <div className={`absolute inset-x-0 top-0 h-36 bg-gradient-to-br ${project.accent} opacity-70 blur-2xl`} />
+
       <div className="relative">
         <div className="flex items-start justify-between gap-4">
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white">
@@ -276,20 +304,29 @@ function ProjectCard({ project, index }) {
 
         <div className="mt-6 flex flex-wrap gap-2">
           {project.highlights.map((item) => (
-            <span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/70">
+            <span
+              key={item}
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/70"
+            >
               {item}
             </span>
           ))}
         </div>
 
         <div className="mt-7 flex items-center gap-3">
-          <a href={project.url} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-300">
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
+          >
             Visit Site
             <ExternalLink className="h-4 w-4" />
           </a>
-          <a href="#contact"
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+          >
             Ask About It
           </a>
         </div>
@@ -307,6 +344,7 @@ function ProjectsSection() {
           title="A portfolio built around real use cases"
           description="Each product solves a different problem space, but they all share the same mindset: strong UX, practical value, and product-first execution."
         />
+
         <div className="grid gap-6 lg:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard key={project.name} project={project} index={index} />
@@ -319,23 +357,47 @@ function ProjectsSection() {
 
 function ApproachSection() {
   const items = [
-    { icon: Code2, title: "Build around the problem", description: "I focus on clear product value first, then shape the UI, workflows, and stack around the actual user need." },
-    { icon: Layers3, title: "Design for scale", description: "Every concept is approached like a living product with room for growth, iteration, and more advanced feature layers." },
-    { icon: Globe, title: "Make each brand distinct", description: "Even inside one portfolio, each venture gets its own voice, positioning, and audience-specific experience." },
+    {
+      icon: Code2,
+      title: "Build around the problem",
+      description:
+        "I focus on clear product value first, then shape the UI, workflows, and stack around the actual user need.",
+    },
+    {
+      icon: Layers3,
+      title: "Design for scale",
+      description:
+        "Every concept is approached like a living product with room for growth, iteration, and more advanced feature layers.",
+    },
+    {
+      icon: Globe,
+      title: "Make each brand distinct",
+      description:
+        "Even inside one portfolio, each venture gets its own voice, positioning, and audience-specific experience.",
+    },
   ];
 
   return (
     <section id="approach" className="px-6 py-24 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
-        <SectionHeader eyebrow="How I Build" title="From idea to product identity"
-          description="My process blends interface design, product strategy, and full-stack thinking to turn ideas into usable digital experiences." />
+        <SectionHeader
+          eyebrow="How I Build"
+          title="From idea to product identity"
+          description="My process blends interface design, product strategy, and full-stack thinking to turn ideas into usable digital experiences."
+        />
+
         <div className="grid gap-6 md:grid-cols-3">
           {items.map((item, index) => {
             const Icon = item.icon;
             return (
-              <motion.div key={item.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, delay: index * 0.08 }}
-                className="rounded-[2rem] border border-white/10 bg-white/5 p-7">
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.08 }}
+                className="rounded-[2rem] border border-white/10 bg-white/5 p-7"
+              >
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-300">
                   <Icon className="h-6 w-6" />
                 </div>
@@ -354,9 +416,13 @@ function AboutSection() {
   return (
     <section id="about" className="px-6 py-24 lg:px-8 lg:py-28">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-        <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.7 }}
-          className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
+          className="rounded-[2rem] border border-white/10 bg-white/5 p-8"
+        >
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">About Jebarco</p>
           <h2 className="mt-4 text-4xl font-black tracking-tight text-white">Builder, thinker, and product creator.</h2>
           <p className="mt-5 text-base leading-8 text-white/68">
@@ -364,7 +430,12 @@ function AboutSection() {
             PHP-backed systems, product concepts, and brand-led digital experiences designed to solve real problems.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {["React-driven frontends","PHP and backend workflows","Product positioning","Scalable UI systems"].map((item) => (
+            {[
+              "React-driven frontends",
+              "PHP and backend workflows",
+              "Product positioning",
+              "Scalable UI systems",
+            ].map((item) => (
               <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white/75">
                 {item}
               </div>
@@ -372,8 +443,12 @@ function AboutSection() {
           </div>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.7, delay: 0.1 }}>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+        >
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-400/10 via-white/5 to-violet-500/10 p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/45">Current Direction</p>
             <h3 className="mt-4 text-3xl font-black tracking-tight text-white">Creating connected products with distinct identities</h3>
@@ -382,8 +457,16 @@ function AboutSection() {
               a larger product mindset around innovation, execution, and market-ready interfaces.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              {["Founder portfolio","Product showcase","Creative technology","Business-first software"].map((item) => (
-                <span key={item} className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm font-medium text-white/75">
+              {[
+                "Founder portfolio",
+                "Product showcase",
+                "Creative technology",
+                "Business-first software",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm font-medium text-white/75"
+                >
                   {item}
                 </span>
               ))}
@@ -412,13 +495,17 @@ function ContactSection() {
             development, and execution.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a href="mailto:hello@jebarco.com"
-              className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-7 py-4 text-sm font-bold text-slate-950 transition hover:bg-cyan-300">
+            <a
+              href="mailto:hello@jebarco.com"
+              className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-7 py-4 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
+            >
               Email Jebarco
               <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="#projects"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-semibold text-white transition hover:bg-white/10">
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
               Review Projects
             </a>
           </div>
@@ -434,10 +521,10 @@ function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:flex-row">
         <p className="text-sm text-white/45">© {new Date().getFullYear()} Jebarco. All rights reserved.</p>
         <div className="flex items-center gap-5 text-sm text-white/45">
-          <a href="https://focuslottery.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">FocusLottery</a>
-          <a href="https://ikalisk.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">iKalisk</a>
-          <a href="https://poundmod.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">PoundMod</a>
-          <a href="https://orcazoo.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Orcazoo</a>
+          <a href="https://focuslottery.com" target="_blank" rel="noreferrer" className="transition hover:text-white">FocusLottery</a>
+          <a href="https://ikalisk.com" target="_blank" rel="noreferrer" className="transition hover:text-white">iKalisk</a>
+          <a href="https://poundmod.com" target="_blank" rel="noreferrer" className="transition hover:text-white">PoundMod</a>
+          <a href="https://orcazoo.com" target="_blank" rel="noreferrer" className="transition hover:text-white">Orcazoo</a>
         </div>
       </div>
     </footer>
