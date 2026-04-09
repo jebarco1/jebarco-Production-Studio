@@ -151,7 +151,7 @@ function Hero() {
     >
       {/* Background Image Layer */}
 <div
-  className="absolute inset-0 z-0 bg-no-repeat bg-center"
+  className="absolute inset-0 z-0 bg-no-repeat bg-center md:block"  
   style={{
     backgroundImage: "url('/images/god-bg.png')",
     backgroundSize: "80%",
